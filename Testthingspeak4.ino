@@ -18,17 +18,12 @@ const char* myWriteAPIKey2 = "TKAHD6KL66OGR8NQ";
 String myStatus = "";
 
 String value1, value2, value3, value4, value5, value6, value7, value8, value9, value10, value11, value12, data;
-// , value13, value14, value15, value16, value17, value18;
 int turn = 1;
 
 void parseData(String data) {
   int sensor1StartIndex = data.indexOf("sensor1:") + 8;
   int sensor1EndIndex = data.indexOf(",sensor2");
   value1 = data.substring(sensor1StartIndex, sensor1EndIndex);
-
-  // if (sensor1StartIndex >= 0 && sensor1EndIndex > sensor1StartIndex) {
-  //   value1 = data.substring(sensor1StartIndex, sensor1EndIndex);
-  // }
 
   int sensor2StartIndex = data.indexOf("sensor2:") + 8;
   int sensor2EndIndex = data.indexOf(",sensor3");
