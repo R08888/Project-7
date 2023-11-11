@@ -37,7 +37,7 @@ void waitForAnsware() {
 
       if (receivedData.startsWith("sensor1")) {
         // Data dari Client 1
-        dataFromClient1 = receivedData;  // Hilangkan identifikasi klien (2 karakter pertama)
+        dataFromClient1 = receivedData;  
         RSSIclient1 = rf95.lastRssi();
         turn = 2;
         // Serial.println("Data from Client 1: " + dataFromClient1);
@@ -48,11 +48,6 @@ void waitForAnsware() {
         turn = 1;
         // Serial.println("Data from Client 2: " + dataFromClient2);
       }
-      // if (receivedData.startsWith("C3")) {
-      //   // Data dari Client 3
-      //   dataFromClient3 = receivedData.substring(2);
-      //   Serial.println("Data from Client 3: " + dataFromClient3);
-      // }
     } else {
       Serial.println("recv failed");
     }
